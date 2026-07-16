@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - DevVault</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#071124;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .register-box{
+            width:400px;
+            background:#1f2a44;
+            padding:40px;
+            border-radius:20px;
+            text-align:center;
+        }
+
+        .logo{
+            color:#38bdf8;
+            font-size:42px;
+            font-weight:bold;
+            margin-bottom:20px;
+        }
+
+        h2{
+            color:white;
+            margin-bottom:10px;
+        }
+
+        p{
+            color:#b0b8c4;
+            margin-bottom:25px;
+        }
+
+        input{
+            width:100%;
+            padding:15px;
+            margin-bottom:15px;
+            border:none;
+            border-radius:12px;
+            font-size:16px;
+        }
+
+        button{
+            width:100%;
+            padding:15px;
+            border:none;
+            border-radius:12px;
+            background:#38bdf8;
+            font-size:18px;
+            font-weight:bold;
+            cursor:pointer;
+        }
+
+        button:hover{
+            opacity:0.9;
+        }
+
+        .login-link{
+            margin-top:20px;
+            color:white;
+        }
+
+        .login-link a{
+            color:#38bdf8;
+            text-decoration:none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="register-box">
+
+    <div class="logo">⚡ DevVault</div>
+
+    <h2>Create Account</h2>
+
+    <p>Join DevVault and start coding</p>
+
+    <input
+        type="text"
+        id="username"
+        placeholder="Username"
+        autocomplete="off">
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Email"
+        autocomplete="off">
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        autocomplete="new-password">
+
+    <button onclick="registerUser()">
+        Register
+    </button>
+
+    <div class="login-link">
+        Already have an account?
+        <a href="login.html">Login</a>
+    </div>
+
+</div>
+
+<script src="register.js"></script>
+
+</body>
+</html>

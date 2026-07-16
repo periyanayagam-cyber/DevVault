@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trending Snippets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="logo">DevVault</div>
+
+        <a href="index.html">📚 My Snippets</a>
+        <a href="trending.html" class="active">🔥 Trending</a>
+        <a href="leaderboard.html">🏆 Leaderboard</a>
+        <a href="profile.html">👤 Profile</a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+    <h1 class="page-title">
+        🔥 Trending Snippets
+    </h1>
+
+    <div id="trendingList"></div>
+
+</div>
+
+    <div class="right-panel">
+
+    <div class="profile-card">
+
+        <img
+            id="profileAvatar"
+            class="profile-avatar"
+            src="developer.png"
+            alt="Profile">
+
+        <h3 id="profileName">Developer</h3>
+
+        <p>DevVault Member</p>
+
+    </div>
+
+    <div class="stat-box">
+        <h4>Rank</h4>
+        <p id="userRank">#1</p>
+    </div>
+
+    <div class="stat-box">
+        <h4>Snippets</h4>
+        <p id="sideSnippets">0</p>
+    </div>
+
+    <div class="stat-box">
+        <h4>Likes</h4>
+        <p id="sideLikes">0</p>
+    </div>
+
+</div>
+    <script src="script.js"></script>
+    <script src="trending.js"></script>
+
+</body>
+</html>

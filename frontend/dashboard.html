@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>DevVault Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="logo">⚡ DevVault</div>
+
+        <a href="dashboard.html" class="active">🏠 Dashboard</a>
+        <a href="profile.html">👤 Profile</a>
+        <a href="developers.html">👨‍💻 Developers</a>
+        <a href="leaderboard.html">🏆 Leaderboard</a>
+        <a href="trending.html">🔥 Trending</a>
+
+        <a href="#" onclick="logout()">🚪 Logout</a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <h1 class="page-title">
+            Welcome Developer 🚀
+        </h1>
+
+        <!-- Dashboard Stats -->
+        <div class="stats">
+
+            <div class="card">
+                <h2 id="count">0</h2>
+                <p>Total Snippets</p>
+            </div>
+
+            <div class="card">
+                <h2 id="totalLikes">0</h2>
+                <p>Total Likes</p>
+            </div>
+
+            <div class="card">
+                <h2 id="favoriteLanguage">-</h2>
+                <p>Favorite Language</p>
+            </div>
+
+        </div>
+
+        <!-- Search -->
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="🔍 Search snippets..."
+            onkeyup="searchSnippets()">
+
+        <!-- Snippets Section -->
+        <h2 style="margin-bottom:20px;">
+            📚 Your Code Vault
+        </h2>
+
+        <div id="snippetList"></div>
+
+        <!-- Add Snippet Button -->
+        <button
+            class="addBtn"
+            onclick="showForm()">
+
+            + Add New Snippet
+
+        </button>
+
+        <!-- Add Snippet Form -->
+        <div id="snippetForm" style="display:none;">
+
+            <h2>Add New Snippet</h2>
+
+            <input
+                id="title"
+                placeholder="Snippet Title">
+
+            <input
+                id="language"
+                placeholder="Programming Language">
+
+            <textarea
+                id="code"
+                placeholder="Write your code here"></textarea>
+
+            <button onclick="addSnippet()">
+                Save Snippet
+            </button>
+
+        </div>
+
+    </div>
+<div class="right-panel">
+
+    <div class="profile-card">
+
+        <img
+            id="profileAvatar"
+            class="profile-avatar"
+            src="developer.png"
+            alt="Profile">
+
+        <h3 id="profileName">Developer</h3>
+
+        <p>DevVault Member</p>
+
+    </div>
+
+    <div class="stat-box">
+        <h4>Rank</h4>
+        <p id="userRank">#1</p>
+    </div>
+
+    <div class="stat-box">
+        <h4>Snippets</h4>
+        <p id="sideSnippets">0</p>
+    </div>
+
+    <div class="stat-box">
+        <h4>Likes</h4>
+        <p id="sideLikes">0</p>
+    </div>
+
+</div>
+
+    <!-- Login Protection -->
+    <script>
+
+        if(!localStorage.getItem("username")){
+
+            window.location.href =
+            "login.html";
+
+        }
+
+    </script>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Profile - DevVault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <div class="logo">DevVault</div>
+
+        <a href="dashboard.html">🏠 Dashboard</a>
+        <a href="index.html">📚 My Snippets</a>
+        <a href="trending.html">🔥 Trending</a>
+        <a href="leaderboard.html">🏆 Leaderboard</a>
+        <a href="profile.html" class="active">👤 Profile</a>
+
+    </div>
+
+    <div class="main-content">
+
+        <h1 class="page-title">
+            👤 Developer Profile
+        </h1>
+
+        <div class="profile-container">
+
+            <div class="profile-header">
+
+    <img
+    id="profileAvatarLarge"
+    class="profile-avatar-large"
+    src="developer.png"
+    alt="Profile">
+
+    <div>
+
+        <h2 id="username"></h2>
+
+        <p>DevVault Developer</p>
+
+        <div class="profile-upload">
+
+            <input
+                type="file"
+                id="profileImageInput"
+                accept="image/*"
+                onchange="uploadProfileImage()">
+
+        </div>
+
+    </div>
+
+</div>
+
+            <div class="profile-details">
+
+                <div class="info-card">
+                    <h3>Full Name</h3>
+                    <p id="name"></p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Skills</h3>
+                    <p id="skills"></p>
+                </div>
+
+                <div class="info-card">
+                    <h3>GitHub</h3>
+                    <p id="github"></p>
+                </div>
+
+            </div>
+
+            <div class="profile-actions">
+
+                <button onclick="editProfile()">
+                    Edit Profile
+                </button>
+
+                <button onclick="window.location.href='dashboard.html'">
+                    Dashboard
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="right-panel">
+
+    <div class="profile-card">
+
+        <img
+            id="profileAvatar"
+            class="profile-avatar"
+            src="developer.png"
+            alt="Profile">
+
+        <h3 id="profileName">Developer</h3>
+
+        <p>DevVault Member</p>
+
+    </div>
+
+    <div class="stat-box">
+        <h4>Rank</h4>
+        <p id="userRank">#1</p>
+    </div>
+
+    <div class="stat-box">
+        <h4>Snippets</h4>
+        <p id="sideSnippets">0</p>
+    </div>
+
+    <div class="stat-box">
+        <h4>Likes</h4>
+        <p id="sideLikes">0</p>
+    </div>
+
+</div>
+
+    <script>
+    if(!localStorage.getItem("username")){
+        window.location.href = "login.html";
+    }
+    </script>
+    <script src="script.js"></script>
+    <script src="profile.js"></script>
+
+</body>
+</html>
